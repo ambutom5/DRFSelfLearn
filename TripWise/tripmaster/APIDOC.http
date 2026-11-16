@@ -1,0 +1,145 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type:  application/json
+
+{
+    "username" : "ambu",
+    "password" : "ambu5",
+    "email" : "ambu5@gmail.com"
+}
+
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type:  application/json
+
+{
+    "username" : "anu",
+    "password" : "anu5",
+    "email" : "anu5@gmail.com"
+}
+
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type:  application/json
+
+{
+    "username" : "krishna",
+    "password" : "krishna5",
+    "email" : "krishna5@gmail.com"
+}
+
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type:  application/json
+
+{
+    "username" : "devu",
+    "password" : "devu5",
+    "email" : "devu5@gmail.com"
+}
+
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic ambu:ambu5
+
+
+###
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic anu:anu5
+
+
+###
+POST http://127.0.0.1:8000/trips/
+Content-Type:  application/json
+Authorization: Basic ambu:ambu5
+
+{
+    "title" : "Trip to Paris",
+    "start_date" : "2026-12-25",
+    "destination" : "Paris"
+}
+
+
+###
+POST http://127.0.0.1:8000/trips/
+Content-Type:  application/json
+Authorization: Basic ambu:ambu5
+
+{
+    "title" : "Trip to Norwich",
+    "start_date" : "2027-02-02",
+    "destination" : "Norwich"
+}
+
+
+###
+POST http://127.0.0.1:8000/trips/
+Content-Type:  application/json
+Authorization: Basic anu:anu5
+
+{
+    "title" : "Trip to Vagamon",
+    "start_date" : "2026-12-15",
+    "destination" : "Vagamon"
+}
+
+
+###
+GET http://127.0.0.1:8000/trips/4/
+Accept: application/json
+Authorization: Basic ambu:ambu5
+
+
+###
+GET http://127.0.0.1:8000/trips/7/
+Accept: application/json
+Authorization: Basic anu:anu5
+
+
+###
+PUT http://127.0.0.1:8000/trips/7/
+Content-Type:  application/json
+Authorization: Basic anu:anu5
+
+{
+    "title" : "Trip to India",
+    "start_date" : "2026-12-25",
+    "destination" : "India"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/trips/1/
+Authorization: Basic anu:anu5
+
+
+###
+GET http://127.0.0.1:8000/trips/7/members/
+Accept: application/json
+Authorization: Basic anu:anu5
+
+
+###
+POST http://127.0.0.1:8000/trips/7/members/
+Content-Type:  application/json
+Authorization: Basic anu:anu5
+
+{
+    "username" : "devu"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/trips/7/members/delete/3/
+Authorization: Basic anu:anu5
+# Authorization: Basic devu:devu5

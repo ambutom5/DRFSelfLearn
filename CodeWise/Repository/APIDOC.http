@@ -1,0 +1,103 @@
+###
+GET http://127.0.0.1:8000/questions/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type:  application/json
+
+{
+    "title" : "Factorial",
+    "language" : "python",
+    "difficulty" : "easy",
+    "score" : 5,
+    "topic" : "Python Coding",
+    "notes" : "To find factorial of a number",
+    "sample_input" : 5,
+    "sample_output" : 120,
+    "is_active" : "True"
+}
+
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+    "title" : "Fibanocci",
+    "language" : "python",
+    "difficulty" : "medium",
+    "score" : 10,
+    "topic" : "Python Coding",
+    "notes" : "To print fibanocci series",
+    "sample_input" : "5",
+    "sample_output" : "0 1 1 2 3",
+    "expected_output" : "0 1 1 2 3",
+    "is_active" : "True"
+}
+
+
+###
+PUT http://127.0.0.1:8000/questions/2/
+Content-Type: application/json
+
+{
+    "title" : "Factorial",
+    "language" : "python",
+    "difficulty" : "easy",
+    "score" : 10,
+    "topic" : "Python Coding",
+    "sample_input" : 5,
+    "sample_output" : 120,
+    "is_active" : "True"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/questions/2/
+
+
+###
+GET http://127.0.0.1:8000/questions/3/
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/submissions/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/submissions/
+Content-Type: application/json
+
+{
+    "question_id" : 21,
+    "answer" : "120",
+    "owner" : "Ambu"
+}
+
+###
+POST http://127.0.0.1:8000/submissions/
+Content-Type: application/json
+
+{
+    "question_id" : 3,
+    "answer" : "12",
+    "owner" : "Anu"
+}
+
+
+###
+GET http://127.0.0.1:8000/submissions/1/
+Accept: application/json
+
+
+###
+PUT http://127.0.0.1:8000/submissions/1/evaluate/
+Content-Type: application/json
+
+{
+    "points" : 5,
+    "remarks" : "Average Logic"
+}
